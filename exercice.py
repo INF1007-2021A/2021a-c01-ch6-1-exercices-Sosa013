@@ -3,24 +3,34 @@
 
 
 def order(values: list = None) -> list:
+
     if values is None:
         # TODO: demander les valeurs ici
         pass
+        values = input("ENTREZ LES VALEURS SUIVANTES:").split( )
 
-    return []
-
+    print (values)
+    return list
 
 def anagrams(words: list = None) -> bool:
     if words is None:
+        list1 = input("entrer le premier mot:")
+        list2 = input("entrer le deuxieme mot:")
+        if sorted (list1) == sorted(list2):
+            print("oui")
+            return True
+        else:
+            print("non")
+            return False
+
         # TODO: demander les mots ici
-        pass
-
-    return False
-
 
 def contains_doubles(items: list) -> bool:
-    return False
-
+    set1 = set(items)
+    if len(set1) == len(items):
+        print("Liste contient tous des éléments uniques")
+    else:
+        print("Liste ne contient pas uniquement des éléments uniques")
 
 def best_grades(student_grades: dict) -> dict:
     # TODO: Retourner un dictionnaire contenant le nom de l'étudiant ayant la meilleure moyenne ainsi que sa moyenne
